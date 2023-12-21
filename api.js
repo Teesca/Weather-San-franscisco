@@ -1,12 +1,48 @@
+
+// const API_KEY = 'https://api.weather.gov/gridpoints/MTR/84,105/forecast';
+
+// searchBtn.addEventListener('click', async () => {
+//     const location = searchBar.value;
+
+//     try {
+//         const response = await fetch(`https://api.weather.gov/gridpoints/MTR/84,105/forecast?apiKey=${API_KEY}`);
+//         const data = await response.json();
+
+//         forecastTable.innerHTML = `
+//             <tr>
+//                 <th>Time</th>
+//                 <th>Temperature</th>
+//                 <th>Description</th>
+//             </tr>
+//             ${data.periods.map(period => `
+//                 <tr>
+//                     <td>${period.name}</td>
+//                     <td>${period.temperature}</td>
+//                     <td>${period.shortForecast}</td>
+//                 </tr>
+//             `).join('')}
+//         `;
+//     } catch (error) {
+//         console.error('Error fetching data:', error);
+//     }
+// });
+
 let weather = {
-    apiKey: "API KEY GOES HERE",
-    fetchWeather: function (city) {
+    apiKey: "https://api.weather.gov/gridpoints/MTR/84,105/forecast",
+    fetchWeather: function (city) 
+    {
       fetch(
-        "https://api.weather.gov/gridpoints/MTR/84,105/forecast" +
-          city +
-          "&units=metric&appid=" +
-          this.apiKey
-      )
+        "https://api.weather.gov/gridpoints/MTR/84,105/forecast", 
+        {method:"GET"})
+      
+      //  fetch(
+      //   city +
+      //   "&units=metric&appid=" +
+      //    this.apiKey,
+
+      //  ) 
+          
+      
         .then((response) => {
           if (!response.ok) {
             alert("No weather found.");
@@ -34,7 +70,8 @@ let weather = {
       document.body.style.backgroundImage =
         "url('https://source.unsplash.com/1600x900/?" + name + "')";
     },
-    search: function () {
+    search: function() 
+    {
       this.fetchWeather(document.querySelector(".search-bar").value);
     },
   };
@@ -51,4 +88,22 @@ let weather = {
       }
     });
   
-  weather.fetchWeather("San Francisco Bay");
+  // weather.fetchWeather("San Francisco Bay");
+
+  // const card = document.querySelector('.card');
+  // const searchBar = document.querySelector('.search-bar');
+  // const searchBtn = document.querySelector('.search-btn');
+  // const forecastTable = document.createElement('table');
+  // forecastTable.classList.add('forecast-table');
+  // card.appendChild(forecastTable);
+  
+  // searchBtn.addEventListener('click', async () => {
+  //     const res = await fetch(`https://api.weather.gov/gridpoints/MTR/84,105/forecast`);
+  //     const data = await res.json();
+  
+  //     forecastTable.innerHTML = `
+  //         <tr>
+  //             <th>Time</th>
+  //             <th>Temperature</th>
+  //             <th>Description</th>
+  //         </tr>

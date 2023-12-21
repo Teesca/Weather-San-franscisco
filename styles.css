@@ -1,3 +1,5 @@
+
+
 body {
     display: flex;
     justify-content: center;
@@ -8,8 +10,37 @@ body {
     background: #222;
     background-image: url('https://source.unsplash.com/1600x900/?landscape');
     font-size: 120%;
+    font-family: Arial, sans-serif;
+    text-align: center;
   }
   
+  
+.weather {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.city {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 128px;
+  height: 128px;
+  margin-right: 20px;
+}
+
+.description {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
   .card {
     background: #000000d0;
     color: white;
@@ -34,7 +65,7 @@ body {
     width: 44px;
     outline: none;
     background: #7c7c7c2b;
-    color: white;
+    color: rgb(117, 91, 235);
     cursor: pointer;
     transition: 0.2s ease-in-out;
   }
@@ -84,3 +115,21 @@ body {
     top: 0;
     left: 20px;
   }
+
+  /* Table Styles */
+.forecast-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.forecast-table th, .forecast-table td {
+  padding: 0.5em;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.forecast-table th {
+  background-color: #4CAF50;
+  color: white;
+}	   

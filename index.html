@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <script src="api.js" defer></script>
+
+  
+
 </head>
 
 <body>
@@ -26,13 +29,53 @@
       <h2 class="city">Weather in Denver</h2>
       <h1 class="temp">51°C</h1>
       <div class="flex">
-        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+        <img src="https://openweathermap.org/img/wn/04n.png" alt=""  class="icon" />
         <div class="description">Cloudy</div>
       </div>
       <div class="humidity">Humidity: 60%</div>
       <div class="wind">Wind speed: 6.2 km/h</div>
     </div>
   </div>
+
+  <div class="forecast-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Weather</th>
+          <th>Temperature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- fetch api -->
+        <!-- fetch('https://api.weather.gov/gridpoints/MTR/84,105/forecast')
+        .then(response=> response.json())
+        .then(data => { }); -->
+      </tbody>
+    </table>
+  </div>
+
+  <table class ="weather-forecast">
+    <thead>
+      <tr>
+        <th>Weather conditions</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>The weather is partially cloudy.</td>
+        <br>
+        <td>Prtly cloudy with a low around 45.
+          North wind around 6 mph </td>
+      </tr> 
+    </tbody>
+
+  </table>
+  <script src="script.js"></script>
+
 </body>
+
+<!-- tshepo -->
 
 </html>
